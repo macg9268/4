@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract cloud technology background with blue and purple hues",
+      "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbG91ZCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzY2MjAxNzY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud technology"
+    }
+  ]
 }
