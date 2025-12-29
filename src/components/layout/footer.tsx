@@ -11,7 +11,7 @@ export function Footer() {
           </p>
         </div>
         <p className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} 4Cloud Inc. All rights reserved.
+          © {new Date().getFullYear()} 4 Cloud Services LLC. All rights reserved.
         </p>
       </div>
     </footer>
