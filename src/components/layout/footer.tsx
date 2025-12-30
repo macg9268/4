@@ -1,4 +1,7 @@
+import Link from 'next/link';
+import { Github } from 'lucide-react';
 import { Logo } from '@/components/logo';
+import { Button } from '@/components/ui/button';
 
 export function Footer() {
   return (
@@ -10,9 +13,17 @@ export function Footer() {
             A modern cloud solutions provider.
           </p>
         </div>
-        <p className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} 4 Cloud Services LLC. All rights reserved.
-        </p>
+        <div className="flex items-center gap-4">
+          <p className="text-center text-sm text-muted-foreground">
+            © {new Date().getFullYear()} 4 Cloud Services LLC. All rights reserved.
+          </p>
+          <Link href="https://github.com/4-cloud" target="_blank" rel="noopener noreferrer">
+            <Button variant="ghost" size="icon">
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Button>
+          </Link>
+        </div>
       </div>
     </footer>
   );
