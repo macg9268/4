@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Logo } from '@/components/logo';
 
 export function Header() {
@@ -10,7 +9,6 @@ export function Header() {
           <Logo className="h-10 w-auto" />
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button>Contact Sales</Button>
         </div>
       </div>
     </header>
