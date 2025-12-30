@@ -12,7 +12,6 @@ const services = [
       "Monitoring, logging, and alerting",
       "Deployment automation",
     ],
-    result: "Faster releases, fewer errors, and improved system stability.",
   },
   {
     icon: <Zap className="h-10 w-10 text-primary" />,
@@ -67,9 +66,6 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                {service.result && (
-                  <p className="mt-4 text-sm font-semibold text-primary">{service.result}</p>
-                )}
               </CardContent>
             </Card>
           ))}
