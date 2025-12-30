@@ -14,7 +14,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <Link href="#services">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">Our Services</Button>
+              <Button size="lg" className="bg-primary-foreground text-background hover:bg-primary-foreground/90">Our Services</Button>
             </Link>
             <Link href="#contact">
               <Button size="lg" variant="outline" className="border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-background">
