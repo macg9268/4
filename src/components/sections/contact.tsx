@@ -1,3 +1,4 @@
+
 export function Contact() {
   return (
     <section id="contact" className="py-16 sm:py-24 bg-secondary">
@@ -12,7 +13,7 @@ export function Contact() {
               support@4cloud.com.mx
             </a>
             <p className="text-sm text-muted-foreground">
-              Drop us a line if you have suggestions.
+              Leave us a line if you are interested in our services
             </p>
           </div>
           <div className="space-y-3">
