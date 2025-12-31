@@ -19,7 +19,7 @@ export function Header() {
         <nav className="hidden flex-1 items-center justify-end space-x-4 md:flex">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href}>
-              <Button variant="ghost">{link.label}</Button>
+              <Button variant="outline">{link.label}</Button>
             </Link>
           ))}
         </nav>
