@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ContactForm } from "../contact-form";
 
 export function Hero() {
   return (
     <section className="relative w-full flex items-center justify-center text-center py-16 sm:py-24 animated-gradient">
-      <div className="px-4 md:px-6">
+      <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="max-w-3xl mx-auto space-y-4 text-center">
-            <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animated-text-gradient text-primary-foreground">
+            <h1 className="text-4xl font-body font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
               Power Your Future with 4Cloud
             </h1>
             <p className="mt-6 text-lg leading-8 text-primary-foreground/90 md:text-xl">
