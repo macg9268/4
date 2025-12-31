@@ -28,7 +28,7 @@ export function Hero() {
             </div>
           </div>
           <div className="w-full max-w-md mx-auto">
-            <ContactForm className="bg-transparent border-none shadow-none" />
+            <ContactForm className="bg-transparent border-none shadow-none" showTitle={false} />
           </div>
         </div>
       </div>
