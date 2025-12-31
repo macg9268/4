@@ -32,7 +32,7 @@ export function Header() {
       "sticky top-0 z-50 w-full transition-all duration-300",
       scrolled
         ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-        : "animated-gradient border-b border-transparent"
+        : "bg-transparent"
     )}>
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
