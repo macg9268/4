@@ -15,7 +15,7 @@ export function Footer() {
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} 4 Cloud Services LLC. All rights reserved.
           </p>
-          <Link href="https://github.com/4-cloud" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/macg9268" target="_blank" rel="noopener noreferrer">
             <Button size="icon" className="animated-button-gradient transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
               <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
