@@ -15,7 +15,6 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Logo />
-          <span className="font-bold text-lg font-headline">4Cloud</span>
         </Link>
         <nav className="hidden flex-1 items-center justify-end space-x-4 md:flex">
           {navLinks.map(link => (
@@ -36,7 +35,6 @@ export function Header() {
               <div className="grid gap-4 py-6">
                 <Link href="/" className="mb-4 flex items-center space-x-2">
                   <Logo />
-                  <span className="font-bold text-lg font-headline">4Cloud</span>
                 </Link>
                 {navLinks.map(link => (
                   <Link key={link.href} href={link.href}>
