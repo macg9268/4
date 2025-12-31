@@ -16,7 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -24,7 +24,11 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
-export function ContactForm() {
+interface ContactFormProps {
+  variant?: "default" | "hero";
+}
+
+export function ContactForm({ variant = "default" }: ContactFormProps) {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -52,13 +56,19 @@ export function ContactForm() {
     }
   }
 
+  const isHero = variant === "hero";
+
   return (
-    <Card className="w-full">
-      <CardHeader>
-        <CardTitle className="font-headline">Contact Us</CardTitle>
-        <CardDescription>Fill in the form below to send us a message.</CardDescription>
-      </CardHeader>
-      <CardContent>
+    <div className={cn(!isHero && "rounded-lg border bg-card text-card-foreground shadow-sm w-full")}>
+      <div className={cn("flex flex-col space-y-1.5 p-6", { "p-0": isHero })}>
+        <h2 className={cn("font-headline text-2xl font-semibold leading-none tracking-tight", { "text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl animated-text-gradient text-primary-foreground": isHero })}>
+          {isHero ? "Power Your Future with 4Cloud" : "Contact Us"}
+        </h2>
+        <p className={cn("text-sm text-muted-foreground", { "mt-6 text-lg leading-8 text-primary-foreground/90 md:text-xl": isHero })}>
+          {isHero ? "Reliable, scalable, and secure cloud solutions designed to accelerate your innovation and growth." : "Fill in the form below to send us a message."}
+        </p>
+      </div>
+      <div className={cn("p-6 pt-0", { "p-0": isHero })}>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
@@ -66,7 +76,7 @@ export function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>                  
+                  <FormLabel className={cn({ "text-primary-foreground": isHero })}>Full Name</FormLabel>
                   <FormControl>
                     <Input placeholder="John Doe" {...field} />
                   </FormControl>
@@ -79,7 +89,7 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address</FormLabel>
+                  <FormLabel className={cn({ "text-primary-foreground": isHero })}>Email Address</FormLabel>
                   <FormControl>
                     <Input placeholder="john.doe@example.com" {...field} />
                   </FormControl>
@@ -92,7 +102,7 @@ export function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Your Message</FormLabel>
+                  <FormLabel className={cn({ "text-primary-foreground": isHero })}>Your Message</FormLabel>
                   <FormControl>
                     <Textarea placeholder="How can we help you?" className="min-h-[100px]" {...field} />
                   </FormControl>
@@ -105,7 +115,7 @@ export function ContactForm() {
             </Button>
           </form>
         </Form>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
