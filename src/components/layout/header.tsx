@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { Logo } from '@/components/logo';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
@@ -12,8 +13,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2 font-bold text-lg font-headline">
-          4Cloud
+        <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Logo />
+          <span className="font-bold text-lg font-headline">4Cloud</span>
         </Link>
         <nav className="hidden flex-1 items-center justify-end space-x-4 md:flex">
           {navLinks.map(link => (
@@ -32,8 +34,9 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <div className="grid gap-4 py-6">
-                <Link href="/" className="mb-4 font-bold text-lg font-headline">
-                  4Cloud
+                <Link href="/" className="mb-4 flex items-center space-x-2">
+                  <Logo />
+                  <span className="font-bold text-lg font-headline">4Cloud</span>
                 </Link>
                 {navLinks.map(link => (
                   <Link key={link.href} href={link.href}>
