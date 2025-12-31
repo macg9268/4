@@ -17,7 +17,7 @@ export function Hero() {
               <Button size="lg">Our Services</Button>
             </Link>
             <Link href="#contact">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
                 Get in touch
               </Button>
             </Link>
