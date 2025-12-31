@@ -27,12 +27,16 @@ export function Header() {
     };
   }, []);
 
+  const buttonClasses = scrolled
+    ? "border-primary text-primary hover:bg-primary/10"
+    : "border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground";
+
   return (
     <header className={cn(
       "sticky top-0 z-50 w-full transition-all duration-300",
       scrolled
         ? "border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-        : "animated-gradient"
+        : ""
     )}>
       <div className="container flex h-14 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -41,7 +45,7 @@ export function Header() {
         <nav className="hidden flex-1 items-center justify-end space-x-4 md:flex">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href}>
-              <Button className="animated-button-gradient transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">{link.label}</Button>
+              <Button variant="outline" className={cn("bg-transparent", buttonClasses)}>{link.label}</Button>
             </Link>
           ))}
         </nav>
