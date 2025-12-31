@@ -24,7 +24,7 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
-export function ContactForm() {
+export function ContactForm({ className }: { className?: string }) {
   const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,7 +53,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className={cn("rounded-lg border bg-card text-card-foreground shadow-sm w-full")}>
+    <div className={cn("rounded-lg border bg-card text-card-foreground shadow-sm w-full", className)}>
       <div className={cn("flex flex-col space-y-1.5 p-6")}>
         <h2 className={cn("font-headline text-2xl font-semibold leading-none tracking-tight")}>
           Contact Us
