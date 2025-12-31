@@ -1,7 +1,7 @@
 
 export function Contact() {
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-secondary">
+    <section id="contact" className="py-16 sm:py-24 bg-secondary/50">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div className="space-y-3">
