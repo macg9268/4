@@ -19,7 +19,7 @@ export function Header() {
         <nav className="hidden flex-1 items-center justify-end space-x-4 md:flex">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href}>
-              <Button className="animated-button-gradient">{link.label}</Button>
+              <Button className="animated-button-gradient transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">{link.label}</Button>
             </Link>
           ))}
         </nav>
