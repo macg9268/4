@@ -16,7 +16,7 @@ export function Hero() {
             </p>
             <div className="mt-10 flex items-center justify-start gap-x-6">
               <Link href="#services">
-                <Button size="lg" className="bg-secondary text-secondary-foreground">
+                <Button size="lg" className="bg-secondary text-secondary-foreground animated-button-gradient transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
                   Our Services
                 </Button>
               </Link>
@@ -28,7 +28,7 @@ export function Hero() {
             </div>
           </div>
           <div className="w-full max-w-md mx-auto">
-            <ContactForm className="bg-transparent border-none shadow-none" showTitle={false} />
+            <ContactForm className="bg-card/80 backdrop-blur-sm" />
           </div>
         </div>
       </div>

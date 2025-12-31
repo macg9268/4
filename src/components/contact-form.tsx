@@ -64,7 +64,7 @@ export function ContactForm({ className, showTitle = true }: { className?: strin
             </p>
         </div>
       )}
-      <div className={cn("p-6 pt-0")}>
+      <div className={cn("p-6", showTitle && "pt-0")}>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
