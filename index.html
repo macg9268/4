@@ -1,14 +1,223 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta name="">
+  <title>4Cloud</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <!-- Header -->
+  <header class="animated-gradient">
+    <div class="header-inner">
+      <nav class="navbar">
+            <div class="logo"> <a href="#home">
+              <img src="images/whitelogo.svg" width="100" height="50"></a>
+            </div>
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+            <label for="mobile-menu-toggle" class="mobile-menu-button" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+     <section class="hero animated-gradient" id="home">
+    <div class="hero-content">
+      <h1>Power Your Future with 4Cloud</h1>
+      <p>
+        Reliable, scalable, and secure cloud solutions designed to accelerate
+        your innovation and growth.
+      </p>
+      <div class="hero-btns">
+        <a href="#services" class="primary">Our Services</a>
+        <a href="#contact" class="secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <h2>Our Services</h2>
+      <p>Solutions designed to support your cloud journey</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="card">
+        <h3>DevOps Services</h3>
+        <ul class="features">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            CI/CD Pipelines
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Cloud Infrastructure</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Monitoring & Logging</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Automation Consulting</h3>
+        <ul class="features">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Process Automation</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Infrastructure as Code</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Efficiency Optimization</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Website Consulting</h3>
+        <ul class="features">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Performance Optimization</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Security Best Practices</li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+              <path d="m9 11 3 3L22 4"></path>
+            </svg>
+            Scalable Architecture</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+
+    <div class="contact-col">
+      <h3>Support</h3>
+      <a href="mailto:support@4cloud.com.mx" class="contact-email">
+        support@4cloud.com.mx</a>
+      <p class="contact-muted">
+        Leave us a line if you are interested in our services
+      </p>
+    </div>
+
+    <div class="contact-col">
+      <h3>About</h3>
+      <p class="contact-muted">
+        Created as a personal project
+      </p>
+    </div>
+
+    <div class="contact-col">
+      <h3>Company</h3>
+      <p>4Cloud Services LLC</p>
+      <p class="contact-muted">Austin, Texas</p>
+    </div>
+  </div>
+</section>
+
+ <!-- =====================
+     FOOTER
+===================== -->
+<footer class="footer">
+  <p>©2025 4Cloud Services LLC. All rights reserved.</p>
+</footer>
+
+<!-- =====================
+     FIXED GITHUB ICON
+===================== -->
+<a
+  href="https://github.com/macg9268"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="github-fixed"
+  aria-label="GitHub Repository"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+    0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61
+    -.546-1.387-1.333-1.757-1.333-1.757
+    -1.09-.745.083-.73.083-.73
+    1.205.085 1.84 1.237 1.84 1.237
+    1.07 1.834 2.807 1.305 3.492.998
+    .108-.776.418-1.305.76-1.605
+    -2.665-.304-5.466-1.332-5.466-5.93
+    0-1.31.47-2.38 1.235-3.22
+    -.135-.303-.54-1.523.105-3.176
+    0 0 1.005-.322 3.3 1.23
+    .96-.267 1.98-.399 3-.405
+    1.02.006 2.04.138 3 .405
+    2.28-1.552 3.285-1.23 3.285-1.23
+    .645 1.653.24 2.873.12 3.176
+    .765.84 1.23 1.91 1.23 3.22
+    0 4.61-2.805 5.625-5.475 5.92
+    .435.375.825 1.11.825 2.235
+    0 1.61-.015 2.91-.015 3.305
+    0 .315.21.69.825.57
+    C20.565 21.795 24 17.295 24 12
+    24 5.37 18.63 0 12 0z"/>
+  </svg>
+</a>
+
+</footer>
+
+<script src="main.js"></script>
+
 </body>
 </html>
